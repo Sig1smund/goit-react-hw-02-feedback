@@ -5,7 +5,7 @@ export default function Statistics({
   neutral,
   bad,
   total,
-  positivePercentage = 0,
+  positivePercentage,
 }) {
   return (
     <div className="stat__block">
