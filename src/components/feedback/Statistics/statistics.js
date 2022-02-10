@@ -9,7 +9,7 @@ export default function Statistics({
   positivePercentage,
 }) {
   return (
-    <div className="stat__block">
+    <div>
       <h2>Statistics</h2>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
