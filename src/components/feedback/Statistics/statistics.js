@@ -1,5 +1,4 @@
 import propTypes from 'prop-types';
-import s from './statistics.module.css';
 
 export default function Statistics({
   good,
@@ -15,8 +14,8 @@ export default function Statistics({
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
 
-      <p className={s.total}>Total: {total}</p>
-      <p className={s.percentage}>Positive Percentage: {positivePercentage}%</p>
+      <p>Total: {total}</p>
+      <p>Positive Percentage: {positivePercentage}%</p>
     </div>
   );
 }
