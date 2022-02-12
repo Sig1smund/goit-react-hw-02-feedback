@@ -1,32 +1,21 @@
 import s from './feedbackOptions.module.css';
 
-export default function FeedbackOptions({ onLeaveFeedback }) {
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div className="buttons__block">
-      <button
-        id="good"
-        className={s.good}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Good
-      </button>
-      <button
-        id="neutral"
-        className={s.neutral}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Neutral
-      </button>
-      <button
-        id="bad"
-        className={s.bad}
-        type="button"
-        onClick={onLeaveFeedback}
-      >
-        Bad
-      </button>
+      {options.map(elem => {
+        return (
+          <button
+            id={elem}
+            key={elem}
+            className={s.elem}
+            type="button"
+            onClick={onLeaveFeedback}
+          >
+            {elem}
+          </button>
+        );
+      })}
     </div>
   );
 }
