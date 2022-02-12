@@ -35,7 +35,7 @@ class App extends Component {
 
   render() {
     const total = this.countTotalFeedback();
-    const positivePercentage = this.countPositiveFeedbackPercentage();
+    const positivePercentage = Math.floor(this.countPositiveFeedbackPercentage());
     const eventHandler = this.onIncrement;
 
     return (
