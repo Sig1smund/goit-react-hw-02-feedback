@@ -12,13 +12,10 @@ class App extends Component {
   };
 
   onIncrement = e => {
-    if (e.target.id === 'good') {
-      return this.setState(state => ({ good: state.good + 1 }));
-    } else if (e.target.id === 'neutral') {
-      return this.setState(state => ({ neutral: state.neutral + 1 }));
-    } else if (e.target.id === 'bad') {
-      return this.setState(state => ({ bad: state.bad + 1 }));
-    }
+    const { id } = e.target;
+    this.setState(prevState => {
+      return {[id]:prevState[id]+1}
+    })
   };
 
   countTotalFeedback = () => {
