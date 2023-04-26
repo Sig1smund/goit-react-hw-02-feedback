@@ -13,9 +13,9 @@ class App extends Component {
 
   onIncrement = e => {
     const { id } = e.target;
-    const loweredId = id.toLowerCase()
+    console.log(id)
     this.setState(prevState => {
-      return {[loweredId]:prevState[loweredId]+1}
+      return {[id]:prevState[id]+1}
     })
   };
 
