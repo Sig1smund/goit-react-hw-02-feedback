@@ -13,13 +13,15 @@ class App extends Component {
 
   onIncrement = e => {
     const { id } = e.target;
+    const loweredId = id.toLowerCase()
     this.setState(prevState => {
-      return {[id]:prevState[id]+1}
+      return {[loweredId]:prevState[loweredId]+1}
     })
   };
 
   countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad;
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
   };
 
   countPositiveFeedbackPercentage = () => {
@@ -36,7 +38,7 @@ class App extends Component {
 
     return (
       <Section title="Please leave feedback">
-        <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={eventHandler} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad}/>
+        <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={eventHandler} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad}/>
         {!total ? (
           <Notification title="No feedback given. Yet." />
         ) : (

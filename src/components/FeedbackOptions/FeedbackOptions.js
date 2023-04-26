@@ -1,5 +1,6 @@
 import s from './feedbackOptions.module.css';
 import { nanoid } from 'nanoid';
+import classNames from 'classnames';
 
 export default function FeedbackOptions({
   options,
@@ -9,36 +10,28 @@ export default function FeedbackOptions({
   bad,
 }) {
   return (
-    <div className="buttons__block">
+    <div className={s.container}>
       {Array.isArray(options) &&
         options.map(elem => {
           return (
-            <>
+            <div key={nanoid(4)} className={s.buttonBox}>
               <button
                 id={elem}
-                key={elem}
-                className={s.elem}
+                className={classNames(
+                  s.button,
+                  { [s.good]: elem === 'good' },
+                  { [s.neutral]: elem === 'neutral' },
+                  { [s.bad]: elem === 'bad' }
+                )}
                 type="button"
                 onClick={onLeaveFeedback}
               >
-                {elem} -{' '}
-                {elem === 'good' && (
-                  <span key={nanoid()} className={s.tag}>
-                    {good}
-                  </span>
-                )}
-                {elem === 'neutral' && (
-                  <span key={nanoid()} className={s.tag}>
-                    {neutral}
-                  </span>
-                )}
-                {elem === 'bad' && (
-                  <span key={nanoid()} className={s.tag}>
-                    {bad}
-                  </span>
-                )}
+                {elem.charAt(0).toUpperCase() + elem.slice(1)} -{' '}
+                {elem === 'good' && <span className={s.tag}>{good}</span>}
+                {elem === 'neutral' && <span className={s.tag}>{neutral}</span>}
+                {elem === 'bad' && <span className={s.tag}>{bad}</span>}
               </button>
-            </>
+            </div>
           );
         })}
     </div>
