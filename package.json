@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
+    "nanoid": "^4.0.2",
     "prettier": "^2.5.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

@@ -23,10 +23,9 @@ class App extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
+    const { good, neutral, bad } = this.state;
     return (
-      (this.state.good /
-        (this.state.good + this.state.neutral + this.state.bad)) *
-      100
+      (good / (good + neutral + bad)) * 100
     );
   };
 
@@ -37,7 +36,7 @@ class App extends Component {
 
     return (
       <Section title="Please leave feedback">
-        <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={eventHandler} />
+        <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={eventHandler} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad}/>
         {!total ? (
           <Notification title="No feedback given. Yet." />
         ) : (
