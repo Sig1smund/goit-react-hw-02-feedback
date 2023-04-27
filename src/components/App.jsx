@@ -15,9 +15,11 @@ class App extends Component {
 
   onIncrement = e => {
     const { id } = e.target;
-    this.setState(prevState => {
-      return { [id]: prevState[id] + 1 }
-    })
+    if (id) {
+      this.setState(prevState => {
+        return { [id]: prevState[id] + 1 }
+      })
+    }
   };
 
   countTotalFeedback = () => {
