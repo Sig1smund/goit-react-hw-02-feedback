@@ -27,7 +27,7 @@ export default function FeedbackOptions({
                 onClick={onLeaveFeedback}
               >
                 {elem.charAt(0).toUpperCase() + elem.slice(1)}
-                <br />
+                {<br />}
                 {elem === 'good' && <span className={s.tag}>{good}</span>}
                 {elem === 'neutral' && <span className={s.tag}>{neutral}</span>}
                 {elem === 'bad' && <span className={s.tag}>{bad}</span>}

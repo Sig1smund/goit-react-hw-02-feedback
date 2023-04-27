@@ -60,4 +60,5 @@ justify-content: center;
   color: black;
   width: 10px;
   height: 10px;
+  pointer-events: none;
 }
