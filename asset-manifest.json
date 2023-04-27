@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/oit-react-hw-02-feedback/static/css/main.29029035.css",
-    "main.js": "/oit-react-hw-02-feedback/static/js/main.bed2321f.js",
+    "main.css": "/oit-react-hw-02-feedback/static/css/main.aa5915a6.css",
+    "main.js": "/oit-react-hw-02-feedback/static/js/main.d2c7b418.js",
     "static/js/787.e86b6111.chunk.js": "/oit-react-hw-02-feedback/static/js/787.e86b6111.chunk.js",
     "index.html": "/oit-react-hw-02-feedback/index.html",
-    "main.29029035.css.map": "/oit-react-hw-02-feedback/static/css/main.29029035.css.map",
-    "main.bed2321f.js.map": "/oit-react-hw-02-feedback/static/js/main.bed2321f.js.map",
+    "main.aa5915a6.css.map": "/oit-react-hw-02-feedback/static/css/main.aa5915a6.css.map",
+    "main.d2c7b418.js.map": "/oit-react-hw-02-feedback/static/js/main.d2c7b418.js.map",
     "787.e86b6111.chunk.js.map": "/oit-react-hw-02-feedback/static/js/787.e86b6111.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29029035.css",
-    "static/js/main.bed2321f.js"
+    "static/css/main.aa5915a6.css",
+    "static/js/main.d2c7b418.js"
   ]
 }
