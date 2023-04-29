@@ -14,10 +14,12 @@ class App extends Component {
   };
 
   onIncrement = e => {
-    const { id } = e.target;
-    if (id) {
+    const { name } = e.target;
+    console.log(e.target)
+    console.log(e.target.data-name);
+    if (name) {
       this.setState(prevState => {
-        return { [id]: prevState[id] + 1 }
+        return { [name]: prevState[name] + 1 }
       })
     }
   };

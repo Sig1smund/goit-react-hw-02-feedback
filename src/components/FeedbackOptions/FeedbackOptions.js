@@ -16,7 +16,9 @@ export default function FeedbackOptions({
           return (
             <div key={nanoid(3)} className={s.buttonBox}>
               <button
-                id={elem}
+                id={nanoid()}
+                data-name={elem}
+                name={elem}
                 className={classNames(
                   s.button,
                   { [s.good]: elem === 'good' },
