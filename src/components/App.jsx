@@ -14,9 +14,7 @@ class App extends Component {
   };
 
   onIncrement = e => {
-    const { name } = e.target;
-    console.log(e.target)
-    console.log(e.target.data-name);
+    const { name } = e.target.dataset;
     if (name) {
       this.setState(prevState => {
         return { [name]: prevState[name] + 1 }
