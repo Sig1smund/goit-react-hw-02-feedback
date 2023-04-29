@@ -18,7 +18,6 @@ export default function FeedbackOptions({
               <button
                 id={nanoid(4)}
                 data-name={elem}
-                // name={elem}
                 className={classNames(
                   s.button,
                   { [s.good]: elem === 'good' },
