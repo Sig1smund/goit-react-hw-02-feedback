@@ -1,4 +1,5 @@
 import s from './feedbackOptions.module.css';
+import propTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import classNames from 'classnames';
 
@@ -39,3 +40,11 @@ export default function FeedbackOptions({
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  good: propTypes.number,
+  neutral: propTypes.number,
+  bad: propTypes.number,
+  options: propTypes.array,
+  onLeaveFeedback: propTypes.func,
+};
